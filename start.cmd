@@ -30,6 +30,7 @@ rm template.fls
 rm template.log
 rm template.synctex.gz
 rm template.toc
+rm template.out
 echo:
 
 
