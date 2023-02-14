@@ -3,7 +3,7 @@ import os
 def construct(lst: list[str]) -> str:
     res = ''
     
-    for s in lst:
+    for s in lst[1:]:
         
         set = s.split(',')
         

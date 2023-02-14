@@ -18,7 +18,7 @@ if __name__ == '__main__':
     print('已检测到文件：')
     print('deep,title,type,path')
     
-    lst = []
+    lst = ['deep,title,type,path']
     construct('./code', 1, lst)
     file = open('./config/map.csv', 'w', encoding = 'utf-8')
     
