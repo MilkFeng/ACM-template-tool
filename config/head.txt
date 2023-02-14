@@ -1,7 +1,7 @@
 %==============================常用宏包、环境==============================%
 \documentclass[twocolumn,4paper]{article}
 \usepackage{xeCJK} % For Chinese characters
-\usepackage[hidelinks]{hyperref}
+\usepackage[hidelinks]{hyperref} % 目录超链接
 \usepackage{amsmath, amsthm}
 \usepackage{listings,xcolor}
 \usepackage{geometry} % 设置页边距

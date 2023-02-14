@@ -3,6 +3,7 @@ import chardet
 
 def construct(path: str) -> list:
     files = os.listdir(path)
+    
     for file in files:
         if os.path.isdir(path + '/' + file):
             construct(path + '/' + file)
