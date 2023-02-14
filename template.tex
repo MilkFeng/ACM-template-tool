@@ -1,0 +1,80 @@
+%==============================常用宏包、环境==============================%
+\documentclass[twocolumn,4paper]{article}
+\usepackage{xeCJK} % For Chinese characters
+\usepackage[hidelinks]{hyperref}
+\usepackage{amsmath, amsthm}
+\usepackage{listings,xcolor}
+\usepackage{geometry} % 设置页边距
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{fancyhdr} % 自定义页眉页脚
+\setsansfont{Consolas} % 设置英文字体
+\setmonofont[Mapping={}]{Consolas} % 英文引号之类的正常显示，相当于设置英文字体
+\geometry{left=1.5cm,right=1.5cm,top=2cm,bottom=1cm} % 页边距
+\setlength{\columnsep}{30pt}
+% \setlength\columnseprule{0.4pt} % 分割线
+%==============================常用宏包、环境==============================%
+
+%==============================页眉、页脚、代码格式设置==============================%
+% 页眉、页脚设置
+\pagestyle{fancy}
+\lhead{ACM/ICPC模板}
+\rhead{第\thepage 页}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% 代码格式设置
+\lstset{
+    language    = c++,
+    numbers     = left,
+    numberstyle = \small,
+    breaklines  = true,
+    captionpos  = b,
+    tabsize     = 4,
+    frame       = single,
+    commentstyle = \color[RGB]{0,128,0},
+    keywordstyle = \color[RGB]{0,0,255},
+    basicstyle   = \small\ttfamily,
+    stringstyle  = \color[RGB]{148,0,209}\ttfamily,
+    rulesepcolor = \color{red!20!green!20!blue!20},
+    showstringspaces = false,
+}
+%==============================页眉、页脚、代码格式设置==============================%
+
+%==============================标题和目录==============================%
+\title{\CJKfamily{hei} \bfseries ACM/ICPC模板}
+\author{XXXXXX}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+
+\begin{document}
+	\begin{titlepage}
+		\maketitle
+		\thispagestyle{empty}
+	\end{titlepage}
+    \renewcommand{\contentsname}{目录}
+    \tableofcontents
+    \thispagestyle{empty}
+    \newpage
+    %==============================标题和目录==============================%
+    
+    %==============================正文部分==============================%
+    \onecolumn
+    \setcounter{page}{1}   %new page
+    \newpage
+    \section{图论}
+        \subsection{Dijkstra}
+            \subsubsection{堆优化的Dijkstra}
+                \lstinputlisting[language=C++]{./code/图论/Dijkstra/堆优化的Dijkstra.cpp}
+            \subsubsection{朴素的Dijkstra}
+                \lstinputlisting[language=C++]{./code/图论/Dijkstra/朴素的Dijkstra.cpp}
+    \newpage
+    \section{字符串}
+        \subsection{KMP}
+            \lstinputlisting[language=C++]{./code/字符串/KMP.cpp}
+        \subsection{后缀数组}
+            \lstinputlisting[language=C++]{./code/字符串/后缀数组.cpp}
+
+%==============================正文部分==============================%
+\end{document}
